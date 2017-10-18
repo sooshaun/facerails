@@ -12,9 +12,9 @@
 
 
 
-<% if @profile.profile_image.present? %>
+<% if @profile.image.present? %>
     <figure>
-      <%= image_tag @profile.profile_image_url(:original), alt: "Poster for #{@profile.name}" %>
+      <%= image_tag @profile.image_url(:original), alt: "Poster for #{@profile.name}" %>
     </figure>
       <% else %>
       <p> No Poster</p>
