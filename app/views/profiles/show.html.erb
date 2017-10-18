@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @profile.bio %>
+</p>
+
+
+
+<% if @profile.profile_image.present? %>
+    <figure>
+      <%= image_tag @profile.profile_image_url(:original), alt: "Poster for #{@profile.name}" %>
+    </figure>
+      <% else %>
+      <p> No Poster</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
